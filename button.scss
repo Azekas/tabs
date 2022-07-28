@@ -1,0 +1,38 @@
+button{
+  font-family: $font2;
+  background: transparent;
+  color: $bronze;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 150ms ease-in-out;
+}
+
+button:hover{
+  background: $red;
+  color: $gold;
+  cursor: pointer;
+}
+button:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: $red;
+  z-index: -1;
+  transition: width 150ms ease-in-out;
+}
+
+button:hover:after {
+  width: 110%;
+}
+.selected{
+  background: $red;
+  color: $offwhite;
+}
